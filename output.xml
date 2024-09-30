@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.4 on win32)" generated="2024-09-30T11:52:45.892887" rpa="false" schemaversion="5">
+<suite id="s1" name="Robot Test" source="C:\Users\boomz\OneDrive\เดสก์ท็อป\testsoft\ExamSoftdev-main\SoftdevExam-robot\robot_test.robot">
+<test id="s1-t1" name="Check true_when_x_is_17" line="8">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-09-30T11:52:46.500389" level="INFO">Creating Session using : alias=mysession, url=http://127.0.0.1:5000, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>mysession</arg>
+<arg>${BASE_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-09-30T11:52:46.500389" elapsed="0.001000"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2024-09-30T11:52:46.505916" level="INFO">GET Request : url=http://127.0.0.1:5000/is_prime/17 
+ path_url=/is_prime/17 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2024-09-30T11:52:46.505916" level="INFO">GET Response : url=http://127.0.0.1:5000/is_prime/17 
+ status=200, reason=OK 
+ headers={'Server': 'Werkzeug/2.3.6 Python/3.12.4', 'Date': 'Mon, 30 Sep 2024 04:52:46 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '4', 'Connection': 'close'} 
+ body=True 
+ </msg>
+<msg time="2024-09-30T11:52:46.506924" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>mysession</arg>
+<arg>/is_prime/17</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-09-30T11:52:46.501389" elapsed="0.005535"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${response.content.decode('utf-8')}</arg>
+<arg>True</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-09-30T11:52:46.506924" elapsed="0.001002"/>
+</kw>
+<doc>Verify that 17 is a prime number</doc>
+<status status="PASS" start="2024-09-30T11:52:46.499391" elapsed="0.008535"/>
+</test>
+<test id="s1-t2" name="Check false_when_x_is_36" line="14">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-09-30T11:52:46.509942" level="INFO">Creating Session using : alias=mysession, url=http://127.0.0.1:5000, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>mysession</arg>
+<arg>${BASE_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-09-30T11:52:46.509942" elapsed="0.000000"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2024-09-30T11:52:46.514934" level="INFO">GET Request : url=http://127.0.0.1:5000/is_prime/36 
+ path_url=/is_prime/36 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2024-09-30T11:52:46.514934" level="INFO">GET Response : url=http://127.0.0.1:5000/is_prime/36 
+ status=200, reason=OK 
+ headers={'Server': 'Werkzeug/2.3.6 Python/3.12.4', 'Date': 'Mon, 30 Sep 2024 04:52:46 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '5', 'Connection': 'close'} 
+ body=False 
+ </msg>
+<msg time="2024-09-30T11:52:46.514934" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>mysession</arg>
+<arg>/is_prime/36</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-09-30T11:52:46.510933" elapsed="0.004001"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${response.content.decode('utf-8')}</arg>
+<arg>False</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-09-30T11:52:46.514934" elapsed="0.001515"/>
+</kw>
+<doc>Verify that 36 is not a prime number</doc>
+<status status="PASS" start="2024-09-30T11:52:46.508955" elapsed="0.007494"/>
+</test>
+<test id="s1-t3" name="Check true_when_x_is_13219" line="20">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-09-30T11:52:46.518470" level="INFO">Creating Session using : alias=mysession, url=http://127.0.0.1:5000, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>mysession</arg>
+<arg>${BASE_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-09-30T11:52:46.518470" elapsed="0.001000"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2024-09-30T11:52:46.524468" level="INFO">GET Request : url=http://127.0.0.1:5000/is_prime/13219 
+ path_url=/is_prime/13219 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2024-09-30T11:52:46.524468" level="INFO">GET Response : url=http://127.0.0.1:5000/is_prime/13219 
+ status=200, reason=OK 
+ headers={'Server': 'Werkzeug/2.3.6 Python/3.12.4', 'Date': 'Mon, 30 Sep 2024 04:52:46 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '4', 'Connection': 'close'} 
+ body=True 
+ </msg>
+<msg time="2024-09-30T11:52:46.524468" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>mysession</arg>
+<arg>/is_prime/13219</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-09-30T11:52:46.519470" elapsed="0.004998"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${response.content.decode('utf-8')}</arg>
+<arg>True</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-09-30T11:52:46.525979" elapsed="0.000000"/>
+</kw>
+<doc>Verify that 13219 is a prime number</doc>
+<status status="PASS" start="2024-09-30T11:52:46.517459" elapsed="0.009527"/>
+</test>
+<status status="PASS" start="2024-09-30T11:52:45.894889" elapsed="0.633122"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Robot Test">Robot Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
