@@ -21,4 +21,4 @@ Check true_when_x_is_13219
     [Documentation]    Verify that -2 is not odd
     Create Session    mysession    ${BASE_URL}
     ${response}=    GET On Session    mysession    /isodd/-2
-    Should Be Equal    ${response.content.decode('utf-8')}    True
+    Should Be Equal    ${response.content.decode('utf-8')}    False

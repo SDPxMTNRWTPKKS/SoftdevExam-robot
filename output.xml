@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.6 on win32)" generated="2024-10-02T13:45:50.998182" rpa="false" schemaversion="5">
+<suite id="s1" name="Robot Test" source="C:\Users\Muthita\Desktop\SPDxExam1G5\SoftdevExam-robot\robot_test.robot">
+<test id="s1-t1" name="Check true_when_x_is_17" line="8">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-10-02T13:45:51.696092" level="INFO">Creating Session using : alias=mysession, url=http://127.0.0.1:5000, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>mysession</arg>
+<arg>${BASE_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-10-02T13:45:51.696092" elapsed="0.000976"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2024-10-02T13:45:51.704885" level="INFO">GET Request : url=http://127.0.0.1:5000/isodd/1 
+ path_url=/isodd/1 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2024-10-02T13:45:51.704885" level="INFO">GET Response : url=http://127.0.0.1:5000/isodd/1 
+ status=200, reason=OK 
+ headers={'Server': 'Werkzeug/2.3.6 Python/3.12.6', 'Date': 'Wed, 02 Oct 2024 06:45:51 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '4', 'Connection': 'close'} 
+ body=True 
+ </msg>
+<msg time="2024-10-02T13:45:51.704885" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>mysession</arg>
+<arg>/isodd/1</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-10-02T13:45:51.697068" elapsed="0.007817"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${response.content.decode('utf-8')}</arg>
+<arg>True</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-02T13:45:51.705863" elapsed="0.000976"/>
+</kw>
+<doc>Verify that 1 is odd</doc>
+<status status="PASS" start="2024-10-02T13:45:51.693161" elapsed="0.013678"/>
+</test>
+<test id="s1-t2" name="Check false_when_x_is_36" line="14">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-10-02T13:45:51.708791" level="INFO">Creating Session using : alias=mysession, url=http://127.0.0.1:5000, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>mysession</arg>
+<arg>${BASE_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-10-02T13:45:51.708791" elapsed="0.000000"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2024-10-02T13:45:51.713678" level="INFO">GET Request : url=http://127.0.0.1:5000/isodd/0 
+ path_url=/isodd/0 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2024-10-02T13:45:51.713678" level="INFO">GET Response : url=http://127.0.0.1:5000/isodd/0 
+ status=200, reason=OK 
+ headers={'Server': 'Werkzeug/2.3.6 Python/3.12.6', 'Date': 'Wed, 02 Oct 2024 06:45:51 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '5', 'Connection': 'close'} 
+ body=False 
+ </msg>
+<msg time="2024-10-02T13:45:51.714653" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>mysession</arg>
+<arg>/isodd/0</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-10-02T13:45:51.708791" elapsed="0.005862"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${response.content.decode('utf-8')}</arg>
+<arg>False</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-02T13:45:51.714653" elapsed="0.000982"/>
+</kw>
+<doc>Verify that 0 is not odd</doc>
+<status status="PASS" start="2024-10-02T13:45:51.707813" elapsed="0.007822"/>
+</test>
+<test id="s1-t3" name="Check true_when_x_is_13219" line="20">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-10-02T13:45:51.718555" level="INFO">Creating Session using : alias=mysession, url=http://127.0.0.1:5000, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>mysession</arg>
+<arg>${BASE_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-10-02T13:45:51.717585" elapsed="0.000970"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2024-10-02T13:45:51.726373" level="INFO">GET Request : url=http://127.0.0.1:5000/isodd/-2 
+ path_url=/isodd/-2 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2024-10-02T13:45:51.726373" level="INFO">GET Response : url=http://127.0.0.1:5000/isodd/-2 
+ status=200, reason=OK 
+ headers={'Server': 'Werkzeug/2.3.6 Python/3.12.6', 'Date': 'Wed, 02 Oct 2024 06:45:51 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '5', 'Connection': 'close'} 
+ body=False 
+ </msg>
+<msg time="2024-10-02T13:45:51.726373" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>mysession</arg>
+<arg>/isodd/-2</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-10-02T13:45:51.718555" elapsed="0.007818"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${response.content.decode('utf-8')}</arg>
+<arg>False</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-02T13:45:51.727363" elapsed="0.000960"/>
+</kw>
+<doc>Verify that -2 is not odd</doc>
+<status status="PASS" start="2024-10-02T13:45:51.717585" elapsed="0.011725"/>
+</test>
+<status status="PASS" start="2024-10-02T13:45:51.001106" elapsed="0.729177"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Robot Test">Robot Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
